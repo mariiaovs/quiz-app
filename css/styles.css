@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+header {
+  background-color: #439a86;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222e50;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: #bcd8c1;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+button {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007991;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.bookmark {
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
