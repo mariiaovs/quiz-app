@@ -4,6 +4,7 @@
 
 body {
   font-size: 15px;
+  color: #222e50;
 }
 
 header {
@@ -18,10 +19,10 @@ h1 {
 }
 
 .card {
-  border-radius: 8px;
+  border-radius: 15px;
   background-color: #bcd8c1;
   padding: 20px;
-  margin: 10px;
+  margin: 20px 10px;
   position: relative;
 }
 
@@ -42,4 +43,35 @@ button:hover {
   position: absolute;
   right: 20px;
   top: -10px;
+}
+
+footer {
+  background-color: #439a86;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit;
+  font-style: inherit;
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid #222e50;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
 }
