@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 body {
@@ -16,6 +18,7 @@ header {
 h1 {
   font-size: 2rem;
   color: #222e50;
+  text-align: center;
 }
 
 .card {
@@ -24,6 +27,32 @@ h1 {
   padding: 20px;
   margin: 20px 10px;
   position: relative;
+  text-align: center;
+}
+
+.card p {
+  margin: 10px;
+}
+
+.card ul {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.card ul li {
+  list-style: none;
+  padding: 1px 10px;
+  background-color: #007991;
+  border: 1px solid #222e50;
+  border-radius: 5px;
+  color: white;
+}
+
+.card ul li:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 button {
@@ -45,6 +74,10 @@ button:hover {
   top: -10px;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
 footer {
   background-color: #439a86;
   position: fixed;
@@ -54,24 +87,33 @@ footer {
 }
 
 nav a {
-  padding: 10px 20px;
+  padding: 10px 15px;
   text-decoration: none;
   color: inherit;
   font-style: inherit;
-  margin: 10px;
-  font-size: 1.5rem;
+  margin: 10px 0;
+  font-size: 1.1rem;
   font-weight: 700;
   border: 1px solid #222e50;
   border-radius: 8px;
-  width: 30%;
+  width: 28%;
   text-align: center;
 }
 
 nav a:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
+}
+
+section:last-child {
+  margin-bottom: 85px;
+}
+
+.open {
+  background-color: rgb(119, 187, 170);
 }
