@@ -26,6 +26,6 @@ const questions = [
     question:
       "Was verleiht Schwarzem Tee seine dunkle Farbe und kräftigen Geschmack?",
     answer: "Fermentation",
-    tags: ["indien"],
+    tags: ["schwarztee"],
   },
 ];
