@@ -1,5 +1,7 @@
 @import "global.css";
 @import "components/card.css";
+@import "components/user.css";
+@import "components/switch.css";
 
 :root {
   --color-dark: #222f3e;
