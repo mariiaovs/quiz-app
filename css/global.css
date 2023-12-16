@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  color: #222e50;
+  max-width: 420px;
+  margin: 0 auto;
+}

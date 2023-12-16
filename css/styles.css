@@ -1,69 +1,71 @@
-* {
-  box-sizing: border-box;
-  max-width: 420px;
-  margin: 0 auto;
-}
+@import "global.css";
+@import "components/card.css";
 
-body {
-  font-size: 15px;
-  color: #222e50;
+:root {
+  --color-dark: #222f3e;
+  --color-grey: #8395a7;
+  --color-lightgrey: #c8d6e5;
+  --color-petrol: #01a3a4;
 }
-
-header {
-  background-color: #439a86;
+.header {
+  background-color: var(--color-petrol);
   padding: 10px 30px;
   margin-bottom: 20px;
 }
 
-h1 {
+.header_title {
   font-size: 2rem;
-  color: #222e50;
+  color: var(--color-dark);
   text-align: center;
 }
 
 .card {
   border-radius: 15px;
-  background-color: #bcd8c1;
+  background-color: var(--color-lightgrey);
   padding: 20px;
   margin: 20px 10px;
   position: relative;
   text-align: center;
+  box-shadow: 0 0 10px 0 var(--color-dark);
 }
 
 .card p {
   margin: 10px;
 }
 
-.card ul {
-  margin-top: 30px;
+.card_tags {
+  margin-top: 50px;
   display: flex;
   justify-content: flex-start;
   padding-left: 0;
+  gap: 10px;
+  margin-left: 15px;
+  font-style: italic;
 }
 
-.card ul li {
+.card_tags li {
   list-style: none;
   padding: 1px 10px;
-  background-color: #007991;
-  border: 1px solid #222e50;
+  background-color: var(--color-petrol);
+  border: 1px solid var(--color-dark);
   border-radius: 5px;
   color: white;
 }
 
-.card ul li:hover {
+.card-tags li:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
-button {
+.button {
   padding: 5px;
   width: 100px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #007991;
+  background-color: var(--color-petrol);
 }
 
-button:hover {
+.button:hover {
   opacity: 0.5;
 }
 
@@ -74,19 +76,17 @@ button:hover {
   top: -10px;
 }
 
-h2 {
+.card_title {
   margin-bottom: 20px;
 }
 
-footer {
-  background-color: #439a86;
-  position: fixed;
+.footer {
+  background-color: var(--color-petrol);
+  position: sticky;
   bottom: 0px;
-  width: 100%;
-  margin-top: 40px;
 }
 
-nav a {
+.footer_nav a {
   padding: 10px 15px;
   text-decoration: none;
   color: inherit;
@@ -94,26 +94,22 @@ nav a {
   margin: 10px 0;
   font-size: 1.1rem;
   font-weight: 700;
-  border: 1px solid #222e50;
+  border: 1px solid var(--color-dark);
   border-radius: 8px;
   width: 28%;
   text-align: center;
 }
 
-nav a:hover {
+.footer_nav a:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-nav {
+.footer_nav {
   display: flex;
   justify-content: space-around;
 }
 
-section:last-child {
-  margin-bottom: 85px;
-}
-
 .open {
-  background-color: rgb(119, 187, 170);
+  background-color: var(--color-lightgrey);
 }
