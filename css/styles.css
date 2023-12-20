@@ -117,3 +117,19 @@
 .open {
   background-color: var(--color-lightgrey);
 }
+
+.card_answers {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  flex-direction: column;
+  border: 1px dotted red;
+  height: 6rem;
+}
+
+.card_answers_button {
+  height: 2rem;
+  width: calc(50% - 1.5rem / 2);
+}
