@@ -2,8 +2,14 @@ const questions = [
   {
     id: 1,
     question: "Welche Teesorte stammt ursprünglich aus China?",
-    answer: "Grüner Tee",
-    tags: ["grüntee", "china"],
+    answers: [
+      "A: Grüner Tee",
+      "B: Schwarzer Tee",
+      "C: Rooibos-Tee",
+      "D: Kamillentee",
+    ],
+    rightAnswer: 0,
+    tags: ["tee", "china"],
   },
 
   {

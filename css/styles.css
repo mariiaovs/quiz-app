@@ -11,8 +11,8 @@
 }
 .header {
   background-color: var(--color-petrol);
-  padding: 10px 30px;
-  margin-bottom: 20px;
+  padding: 0.8rem 2rem;
+  height: 12%;
 }
 
 .header_title {
@@ -22,35 +22,36 @@
 }
 
 .card {
-  border-radius: 15px;
+  border-radius: 1rem;
   background-color: var(--color-lightgrey);
-  padding: 20px;
-  margin: 20px 10px;
+  padding: 1.25rem;
+  margin: 1.5rem 0.8rem;
   position: relative;
   text-align: center;
-  box-shadow: 0 0 10px 0 var(--color-dark);
+  box-shadow: 0 0 0.8rem 0 var(--color-dark);
+  min-height: 75%;
 }
 
 .card p {
-  margin: 10px;
+  margin: 0.8rem;
 }
 
 .card_tags {
-  margin-top: 50px;
+  margin-top: 3rem;
   display: flex;
   justify-content: flex-start;
   padding-left: 0;
-  gap: 10px;
-  margin-left: 15px;
+  gap: 0.8rem;
+  margin-left: 1rem;
   font-style: italic;
 }
 
 .card_tags li {
   list-style: none;
-  padding: 1px 10px;
+  padding: 0.1rem 0.8rem;
   background-color: var(--color-petrol);
   border: 1px solid var(--color-dark);
-  border-radius: 5px;
+  border-radius: 0.3rem;
   color: white;
 }
 
@@ -60,9 +61,9 @@
 }
 
 .button {
-  padding: 5px;
-  width: 100px;
-  border-radius: 5px;
+  padding: 0.3rem;
+  width: 7rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   background-color: var(--color-petrol);
 }
@@ -72,32 +73,33 @@
 }
 
 .bookmark {
-  width: 50px;
+  width: 3rem;
   position: absolute;
-  right: 20px;
-  top: -10px;
+  right: 1.5rem;
+  top: -1rem;
 }
 
 .card_title {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .footer {
   background-color: var(--color-petrol);
   position: sticky;
   bottom: 0px;
+  height: 8%;
 }
 
 .footer_nav a {
-  padding: 10px 15px;
+  padding: 0.8rem 1rem;
   text-decoration: none;
   color: inherit;
   font-style: inherit;
-  margin: 10px 0;
+  margin: 0.8rem 0;
   font-size: 1.1rem;
   font-weight: 700;
-  border: 1px solid var(--color-dark);
-  border-radius: 8px;
+  border: 0.1rem solid var(--color-dark);
+  border-radius: 0.5rem;
   width: 28%;
   text-align: center;
 }
