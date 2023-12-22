@@ -13,12 +13,16 @@
   background-color: var(--color-petrol);
   padding: 0.8rem 2rem;
   height: 12%;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
 }
 
 .header_title {
   font-size: 2rem;
   color: var(--color-dark);
   text-align: center;
+  margin: 0 auto;
 }
 
 .card {
@@ -44,6 +48,9 @@
   gap: 0.8rem;
   margin-left: 1rem;
   font-style: italic;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
 }
 
 .card_tags li {
@@ -55,7 +62,7 @@
   color: white;
 }
 
-.card-tags li:hover {
+.card_tags li:hover {
   cursor: pointer;
   opacity: 0.5;
 }
@@ -95,7 +102,7 @@
   text-decoration: none;
   color: inherit;
   font-style: inherit;
-  margin: 0.8rem 0;
+
   font-size: 1.1rem;
   font-weight: 700;
   border: 0.1rem solid var(--color-dark);
@@ -112,6 +119,8 @@
 .footer_nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 .open {
@@ -123,13 +132,13 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-direction: column;
-  border: 1px dotted red;
-  height: 6rem;
+  /* border: 1px dotted red; */
+  height: 7rem;
 }
 
 .card_answers_button {
-  height: 2rem;
-  width: calc(50% - 1.5rem / 2);
+  padding: 0.5rem;
+  width: calc(50% - 2rem / 2);
 }
