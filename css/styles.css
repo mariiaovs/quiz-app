@@ -27,16 +27,15 @@
 }
 
 .button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   background-color: var(--color-petrol);
   font-size: 1rem;
-  font-style: inherit;
+  border: 1px solid var(--color-dark);
 }
 
 /* .button {
-  padding: 0.3rem;
+    
   width: 7rem;
   border-radius: 0.3rem;
   cursor: pointer;
@@ -50,6 +49,7 @@
 }
 
 .bookmark {
+  padding: 0.3rem;
   width: 3rem;
   position: absolute;
   right: 1.5rem;
