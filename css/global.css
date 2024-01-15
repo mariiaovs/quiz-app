@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-dark: #222f3e;
+  --color-grey: #8395a7;
+  --color-lightgrey: #c8d6e5;
+  --color-petrol: #01a3a4;
+}
+
 html {
   height: 100%;
   font-size: 10px;
