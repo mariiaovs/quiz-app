@@ -2,6 +2,7 @@
 @import "components/card.css";
 @import "components/user.css";
 @import "components/switch.css";
+@import "components/footer.css";
 
 :root {
   --color-dark: #222f3e;
@@ -54,48 +55,6 @@
   position: absolute;
   right: 1.5rem;
   top: -1rem;
-}
-
-.card_title {
-  margin-bottom: 1.25rem;
-  font-size: 2.5rem;
-}
-
-.footer {
-  background-color: var(--color-petrol);
-  position: sticky;
-  bottom: 0px;
-  height: 8%;
-}
-
-.footer_nav a {
-  padding: 0.8rem 1rem;
-  text-decoration: none;
-  color: inherit;
-  font-style: inherit;
-
-  font-size: 1.1rem;
-  font-weight: 700;
-  border: 0.1rem solid var(--color-dark);
-  border-radius: 0.5rem;
-  width: 28%;
-  text-align: center;
-}
-
-.footer_nav a:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.footer_nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-}
-
-.open {
-  background-color: var(--color-lightgrey);
 }
 
 @media (min-width: 900px) {
