@@ -1,5 +1,22 @@
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector('[data-js="main"]');
+const leftCharactersQuestion = document.querySelector(
+  '[data-js="question-characters"]'
+);
+const leftCharactersAnswer = document.querySelector(
+  '[data-js="answer-characters"]'
+);
+const textareaQuestion = document.querySelector('[data-js="question"]');
+const textareaAnswer = document.querySelector('[data-js="answer"]');
+
+showLeftCharacters(textareaQuestion, leftCharactersQuestion);
+showLeftCharacters(textareaAnswer, leftCharactersAnswer);
+
+function showLeftCharacters(textarea, leftCharacters) {
+  textarea.addEventListener("input", () => {
+    leftCharacters.textContent = 150 - textarea.value.length;
+  });
+}
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();

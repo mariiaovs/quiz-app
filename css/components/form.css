@@ -35,3 +35,8 @@
   align-self: center;
   margin-top: 2rem;
 }
+
+.left {
+  color: red;
+  font-size: 0.8rem;
+}
