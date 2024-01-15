@@ -15,7 +15,7 @@
   font-weight: 700;
   border: 0.1rem solid var(--color-dark);
   border-radius: 0.5rem;
-  width: 28%;
+  width: 23%;
   text-align: center;
   height: calc(100% - 20px);
 }

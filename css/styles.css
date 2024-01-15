@@ -4,12 +4,6 @@
 @import "components/switch.css";
 @import "components/footer.css";
 
-:root {
-  --color-dark: #222f3e;
-  --color-grey: #8395a7;
-  --color-lightgrey: #c8d6e5;
-  --color-petrol: #01a3a4;
-}
 .header {
   background-color: var(--color-petrol);
   padding: 0.8rem 2rem;
