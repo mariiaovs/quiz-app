@@ -1,4 +1,27 @@
+.main {
+  min-height: 75%;
+}
+
 .user_img {
   width: 30%;
   padding: 10px;
+  background-color: white;
+  margin: auto;
+  border-radius: 60%;
+}
+
+.user {
+  background-color: var(--color-lightgrey);
+  border-radius: 2rem;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.settings {
+  background-color: var(--color-lightgrey);
+  border-radius: 2rem;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
 }
