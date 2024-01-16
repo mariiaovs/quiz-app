@@ -25,6 +25,12 @@
   cursor: pointer;
 }
 
+.footer_nav a svg {
+  width: 3rem;
+  height: 3rem;
+  fill: white;
+}
+
 .footer_nav {
   display: flex;
   justify-content: space-around;
