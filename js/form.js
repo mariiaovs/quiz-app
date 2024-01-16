@@ -1,3 +1,48 @@
+let questions = [
+  {
+    id: 1,
+    question: "Welche Teesorte stammt ursprünglich aus China?",
+    answers: [
+      "A: Grüner Tee",
+      "B: Schwarzer Tee",
+      "C: Rooibos-Tee",
+      "D: Kamillentee",
+    ],
+    rightAnswer: 0,
+    tags: ["teesorten", "china"],
+    isBookmarked: false,
+  },
+
+  {
+    id: 2,
+    question: "Welches ist das meistgetrunkene Getränk der Welt nach Wasser?",
+    answers: ["Kaffee", "Orangensaft", "Schwarzer Tee", "Cola"],
+    rightAnswer: 2,
+    tags: ["teesorten", "wasser"],
+    isBookmarked: false,
+  },
+
+  {
+    id: 3,
+    question:
+      "Welche Region ist bekannt für die Produktion von Darjeeling-Tee?",
+    answers: ["China", "Indien", "Japan", "Sri-Lanka"],
+    tags: ["region", "teesorten"],
+    rightAnswer: 1,
+    isBookmarked: false,
+  },
+
+  {
+    id: 4,
+    question:
+      "Was verleiht Schwarzem Tee seine dunkle Farbe und kräftigen Geschmack?",
+    answers: ["Fermentation", "Sonnenlicht", "Kräuterzusätze", "Zitronensaft"],
+    rightAnswer: 0,
+    tags: ["schwarztee", "teesorten"],
+    isBookmarked: false,
+  },
+];
+
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector('[data-js="main"]');
 const leftCharactersQuestion = document.querySelector(
@@ -22,12 +67,23 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(event.target));
 
+  let newQuestion = {
+    id: questions.length + 1,
+    question: data.question,
+    answers: [data.answer, "Orangensaft", "Schwarzer Tee", "Cola"], // mix answers?
+    rightAnswer: 0,
+    tags: [data.tag],
+    isBookmarked: false,
+  };
+
+  questions.push(newQuestion);
+
   const newCard = document.createElement("section");
   newCard.classList.add("card");
 
   const newCardTitle = document.createElement("h2");
   newCardTitle.classList.add("card_title");
-  newCardTitle.textContent = "Question #";
+  newCardTitle.textContent = `Question ${newQuestion.id}`;
 
   const newCardBookmark = document.createElement("button");
   newCardBookmark.classList.add("button", "bookmark");
