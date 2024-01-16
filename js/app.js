@@ -17,7 +17,6 @@ showAnswerButton.addEventListener("click", () => {
   } else {
     showAnswerButton.textContent = "Hide answer";
     answerText.removeAttribute("hidden");
-    console.log(answerText);
   }
   answerIsShown = !answerIsShown;
 });

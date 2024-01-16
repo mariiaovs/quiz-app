@@ -16,14 +16,30 @@
       <p hidden class="empty">The list is empty</p>
       <section class="card">
         <h2 class="card_title">Question 1</h2>
-        <button aria-label="bookmark" class="button bookmark">⭐</button>
+        <button
+          aria-label="bookmark"
+          class="button bookmark"
+          data-js="bookmark"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="35"
+            height="35"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+        </button>
         <p class="question">Welche Teesorte stammt ursprünglich aus China?</p>
-        <button class="button">Show answer</button>
+        <button class="card_button button" data-js="show-answer">
+          Show answer
+        </button>
         <p class="answer">Grüner Tee</p>
-        <button class="button">Hide answer</button>
         <ul class="card_tags">
-          <li aria-label="tee hashtag">#tee</li>
-          <li aria-label="china hashtag">#china</li>
+          <li aria-label="tee-hashtag">#tee</li>
+          <li aria-label="china-hashtag">#china</li>
         </ul>
       </section>
     </main>
