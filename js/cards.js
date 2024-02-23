@@ -1,13 +1,8 @@
-const questions = [
+export const cards = [
   {
     id: 1,
     question: "Welche Teesorte stammt ursprünglich aus China?",
-    answers: [
-      "A: Grüner Tee",
-      "B: Schwarzer Tee",
-      "C: Rooibos-Tee",
-      "D: Kamillentee",
-    ],
+    answers: ["Grüner Tee", "Schwarzer Tee", "Rooibos-Tee", "Kamillentee"],
     rightAnswer: 0,
     tags: ["teesorten", "china"],
     isBookmarked: false,
