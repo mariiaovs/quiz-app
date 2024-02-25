@@ -1,6 +1,6 @@
 @import "../global.css";
 
-.main {
+.cards {
   display: flex;
   flex-direction: column;
   gap: 1rem;

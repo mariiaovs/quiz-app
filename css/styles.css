@@ -21,6 +21,10 @@
   text-shadow: 4px 4px 6px var(--color-dark);
 }
 
+.cards {
+  min-height: 80vh;
+}
+
 .button {
   border-radius: 0.5rem;
   cursor: pointer;

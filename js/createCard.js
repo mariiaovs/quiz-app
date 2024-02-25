@@ -1,4 +1,4 @@
-export default function createCard(card) {
+export default function createCard(card, cardsList) {
   const cardElement = document.createElement("main");
   cardElement.classList.add("card");
 
@@ -7,7 +7,9 @@ export default function createCard(card) {
   cardTitleElement.textContent = `Question ${card.id}`;
 
   const bookmarkButton = document.createElement("button");
-  bookmarkButton.className = "button bookmark";
+  bookmarkButton.className = `button bookmark ${
+    card.isBookmarked ? "clicked" : ""
+  }`;
   bookmarkButton.setAttribute("aria-label", "bookmark");
   bookmarkButton.innerHTML = `<svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +25,8 @@ export default function createCard(card) {
   bookmarkButton.addEventListener("click", () => {
     card.isBookmarked = !card.isBookmarked;
     bookmarkButton.classList.toggle("clicked");
+    //console.log(cardsList);
+    localStorage.setItem("cards", JSON.stringify(cardsList));
   });
 
   const cardQuestion = document.createElement("p");

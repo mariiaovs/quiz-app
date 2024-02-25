@@ -2,8 +2,10 @@ import createCard from "./createCard.js";
 import { cards } from "./state.js";
 
 let currentTheme = localStorage.getItem("theme") || "light";
-
 if (currentTheme === "dark") document.body.setAttribute("data-theme", "dark");
+
+let cardsList = JSON.parse(localStorage.getItem("cards"));
+if (!cardsList) cardsList = cards;
 
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector('[data-js="main"]');
@@ -33,7 +35,7 @@ form.addEventListener("submit", (event) => {
   tags.map((tag) => tag.trim());
 
   let newCard = {
-    id: cards.length + 1,
+    id: cardsList.length + 1,
     question: data.question,
     answers: [data.answer, "Orangensaft", "Schwarzer Tee", "Cola"], // mix answers?
     rightAnswer: 0,
@@ -41,9 +43,11 @@ form.addEventListener("submit", (event) => {
     isBookmarked: false,
   };
 
-  cards.push(newCard);
+  cardsList.push(newCard);
 
-  main.append(createCard(newCard));
+  localStorage.setItem("cards", JSON.stringify(cardsList));
+
+  main.append(createCard(newCard, cardsList));
   event.target.reset();
   event.target.elements.question.focus();
 });
