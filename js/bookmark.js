@@ -6,13 +6,14 @@ if (currentTheme === "dark") document.body.setAttribute("data-theme", "dark");
 
 const main = document.querySelector('[data-js="cards"]');
 
-let cardsList = JSON.parse(localStorage.getItem("cards"));
-if (!cardsList) cardsList = cards;
-
+let cardsList =
+  localStorage.getItem("cards") === "undefined"
+    ? cards
+    : JSON.parse(localStorage.getItem("cards"));
 console.log(cardsList);
 
-cardsList
-  .filter((card) => card.isBookmarked)
-  .forEach((card) => {
-    main.append(createCard(card));
-  });
+const filteredCardsList = cardsList.filter((card) => card.isBookmarked);
+
+filteredCardsList.forEach((card) => {
+  main.append(createCard(card, cardsList));
+});

@@ -8,13 +8,24 @@ const main = document.querySelector('[data-js="cards"]');
 
 //console.log(localStorage.getItem("cards"));
 
-let cardsList =
-  localStorage.getItem("cards") == true
-    ? JSON.parse(localStorage.getItem("cards"))
-    : cards;
+/* let cardsList = localStorage.getItem("cards");
 
-/* console.log(cardsList);
-if (!cardsList) cardsList = cards; */
+if (cardsList === "undefined") {
+  cardsList = cards;
+} else {
+  cardsList = JSON.parse(cardsList);
+} */
+
+let cardsList =
+  localStorage.getItem("cards") === "undefined"
+    ? cards
+    : JSON.parse(localStorage.getItem("cards"));
+
+console.log(localStorage.getItem("cards"));
+console.log(cardsList);
+
+//console.log(localStorage.getItem("cards")== true);
+//console.log(localStorage.getItem("cards").length);
 
 cardsList.forEach((card) => {
   main.append(createCard(card, cardsList));

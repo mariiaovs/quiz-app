@@ -4,8 +4,10 @@ import { cards } from "./state.js";
 let currentTheme = localStorage.getItem("theme") || "light";
 if (currentTheme === "dark") document.body.setAttribute("data-theme", "dark");
 
-let cardsList = JSON.parse(localStorage.getItem("cards"));
-if (!cardsList) cardsList = cards;
+let cardsList =
+  localStorage.getItem("cards") === "undefined"
+    ? cards
+    : JSON.parse(localStorage.getItem("cards"));
 
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector('[data-js="main"]');
