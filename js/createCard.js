@@ -38,12 +38,69 @@ export default function createCard(card, cardsList) {
   const cardAnswersList = document.createElement("li");
   cardAnswersList.className = "card_answers";
 
-  card.answers.forEach((answer) => {
+  /* card.answers.forEach((answer) => {
     const cardAnswerVariant = document.createElement("button");
     cardAnswerVariant.className = "card_answer button";
+
+    cardAnswerVariant.addEventListener("click", () => {
+      cardAnswerVariant.classList.toggle("clicked");
+    });
+
     cardAnswerVariant.textContent = answer;
     cardAnswersList.append(cardAnswerVariant);
+  }); */
+
+  const cardAnswerVariant0 = document.createElement("button");
+  cardAnswerVariant0.className = "card_answer button";
+  cardAnswerVariant0.textContent = card.answers[0];
+
+  const cardAnswerVariant1 = document.createElement("button");
+  cardAnswerVariant1.className = "card_answer button";
+  cardAnswerVariant1.textContent = card.answers[1];
+
+  const cardAnswerVariant2 = document.createElement("button");
+  cardAnswerVariant2.className = "card_answer button";
+  cardAnswerVariant2.textContent = card.answers[2];
+
+  const cardAnswerVariant3 = document.createElement("button");
+  cardAnswerVariant3.className = "card_answer button";
+  cardAnswerVariant3.textContent = card.answers[3];
+
+  cardAnswerVariant0.addEventListener("click", () => {
+    cardAnswerVariant0.classList.toggle("clicked");
+    cardAnswerVariant1.toggleAttribute("disabled");
+    cardAnswerVariant2.toggleAttribute("disabled");
+    cardAnswerVariant3.toggleAttribute("disabled");
   });
+
+  cardAnswerVariant1.addEventListener("click", () => {
+    cardAnswerVariant1.classList.toggle("clicked");
+    cardAnswerVariant0.toggleAttribute("disabled");
+    cardAnswerVariant2.toggleAttribute("disabled");
+    cardAnswerVariant3.toggleAttribute("disabled");
+  });
+
+  cardAnswerVariant2.addEventListener("click", () => {
+    cardAnswerVariant2.classList.toggle("clicked");
+    cardAnswerVariant1.toggleAttribute("disabled");
+    cardAnswerVariant0.toggleAttribute("disabled");
+    cardAnswerVariant3.toggleAttribute("disabled");
+  });
+
+  cardAnswerVariant3.addEventListener("click", () => {
+    cardAnswerVariant3.classList.toggle("clicked");
+    cardAnswerVariant1.toggleAttribute("disabled");
+    cardAnswerVariant2.toggleAttribute("disabled");
+    cardAnswerVariant0.toggleAttribute("disabled");
+  });
+
+  cardAnswersList.append(
+    cardAnswerVariant0,
+    cardAnswerVariant1,
+    cardAnswerVariant2,
+    cardAnswerVariant3
+  );
+
   // end
 
   const showAnswerButton = document.createElement("button");

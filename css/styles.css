@@ -33,6 +33,11 @@
   border: 1px solid var(--color-dark);
 }
 
+.clicked {
+  background-color: #006f6f;
+  color: white;
+}
+
 /* .button {
     
   width: 7rem;
