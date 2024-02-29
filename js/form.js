@@ -17,15 +17,22 @@ const leftCharactersQuestion = document.querySelector(
 const leftCharactersAnswer = document.querySelector(
   '[data-js="answer-characters"]'
 );
+
+const leftCharactersAnswers = document.querySelector(
+  '[data-js="answers-characters"]'
+);
+
 const textareaQuestion = document.querySelector('[data-js="question"]');
 const textareaAnswer = document.querySelector('[data-js="answer"]');
+const textareaAnswers = document.querySelector('[data-js="answers"]');
 
-showLeftCharacters(textareaQuestion, leftCharactersQuestion);
-showLeftCharacters(textareaAnswer, leftCharactersAnswer);
+showLeftCharacters(textareaQuestion, leftCharactersQuestion, 50);
+showLeftCharacters(textareaAnswer, leftCharactersAnswer, 50);
+showLeftCharacters(textareaAnswers, leftCharactersAnswers, 150);
 
-function showLeftCharacters(textarea, leftCharacters) {
+function showLeftCharacters(textarea, leftCharacters, length) {
   textarea.addEventListener("input", () => {
-    leftCharacters.textContent = 150 - textarea.value.length;
+    leftCharacters.textContent = length - textarea.value.length;
   });
 }
 

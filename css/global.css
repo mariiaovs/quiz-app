@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  width: vw;
+  width: 100vw;
   height: 100%;
   font-size: 1rem;
   color: #222e50;

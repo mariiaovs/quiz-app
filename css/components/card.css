@@ -6,7 +6,7 @@
   position: relative;
   text-align: center;
   box-shadow: 0 0 0.8rem 0 var(--color-dark);
-  height: 20rem;
+  height: 27rem;
 }
 
 .card p {
@@ -21,6 +21,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   flex-direction: row;
+  margin-bottom: 1.5rem;
 }
 
 .card_answer {

@@ -33,6 +33,19 @@ export default function createCard(card, cardsList) {
   cardQuestion.classList.add("question");
   cardQuestion.textContent = card.question;
 
+  //add answer - buttons
+
+  const cardAnswersList = document.createElement("li");
+  cardAnswersList.className = "card_answers";
+
+  card.answers.forEach((answer) => {
+    const cardAnswerVariant = document.createElement("button");
+    cardAnswerVariant.className = "card_answer button";
+    cardAnswerVariant.textContent = answer;
+    cardAnswersList.append(cardAnswerVariant);
+  });
+  // end
+
   const showAnswerButton = document.createElement("button");
   showAnswerButton.className = "card_button button";
   showAnswerButton.textContent = "Show answer";
@@ -65,6 +78,7 @@ export default function createCard(card, cardsList) {
     cardTitleElement,
     bookmarkButton,
     cardQuestion,
+    cardAnswersList,
     showAnswerButton,
     cardAnswer,
     cardTagsList

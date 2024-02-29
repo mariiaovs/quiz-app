@@ -24,11 +24,11 @@
             cols="30"
             rows="10"
             required
-            maxlength="150"
+            maxlength="50"
             data-js="question"
           ></textarea>
           <p class="left">
-            <span data-js="question-characters">150</span> characters left
+            <span data-js="question-characters">50</span> characters left
           </p>
           <label for="answer">Your answer</label>
           <textarea
@@ -37,11 +37,24 @@
             cols="30"
             rows="10"
             required
-            maxlength="150"
+            maxlength="50"
             data-js="answer"
           ></textarea>
           <p class="left">
-            <span data-js="answer-characters">150</span> characters left
+            <span data-js="answer-characters">50</span> characters left
+          </p>
+          <label for="answers">Your 4 variants (separated by a comma)</label>
+          <textarea
+            name="answers"
+            id="answers"
+            cols="30"
+            rows="10"
+            required
+            maxlength="150"
+            data-js="answers"
+          ></textarea>
+          <p class="left">
+            <span data-js="answers-characters">150</span> characters left
           </p>
           <label for="tags">Tags (one or more tags separated by a comma)</label>
           <input required id="tags" type="text" name="tags" />
