@@ -39,17 +39,21 @@ function showLeftCharacters(textarea, leftCharacters, length) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(event.target));
-
+  console.log(data);
   let tags = data.tags.split(",");
   tags.map((tag) => tag.trim());
+
+  let answers = data.answers.split(",");
+  answers.map((answer) => answer.trim());
 
   let newCard = {
     id: cardsList.length + 1,
     question: data.question,
-    answers: [data.answer, "Orangensaft", "Schwarzer Tee", "Cola"], // mix answers?
-    rightAnswer: 0,
+    answers: answers,
+    rightAnswer: Number(data.answer),
     tags,
     isBookmarked: false,
+    answeredRight: false,
   };
 
   cardsList.push(newCard);

@@ -21,11 +21,8 @@ let cardsList =
     ? cards
     : JSON.parse(localStorage.getItem("cards"));
 
-console.log(localStorage.getItem("cards"));
-console.log(cardsList);
-
-//console.log(localStorage.getItem("cards")== true);
-//console.log(localStorage.getItem("cards").length);
+//console.log(localStorage.getItem("cards"));
+//console.log(cardsList);
 
 cardsList.forEach((card) => {
   main.append(createCard(card, cardsList));

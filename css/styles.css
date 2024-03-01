@@ -33,7 +33,7 @@
   border: 1px solid var(--color-dark);
 }
 
-.clicked {
+.chosen {
   background-color: #006f6f;
   color: white;
 }

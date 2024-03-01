@@ -30,19 +30,6 @@
           <p class="left">
             <span data-js="question-characters">50</span> characters left
           </p>
-          <label for="answer">Your answer</label>
-          <textarea
-            name="answer"
-            id="answer"
-            cols="30"
-            rows="10"
-            required
-            maxlength="50"
-            data-js="answer"
-          ></textarea>
-          <p class="left">
-            <span data-js="answer-characters">50</span> characters left
-          </p>
           <label for="answers">Your 4 variants (separated by a comma)</label>
           <textarea
             name="answers"
@@ -55,6 +42,20 @@
           ></textarea>
           <p class="left">
             <span data-js="answers-characters">150</span> characters left
+          </p>
+          <label for="answer">Right answer (number 0 to 3)</label>
+          <input
+            value="0"
+            name="answer"
+            type="number"
+            id="answer"
+            required
+            min="0"
+            max="3"
+            data-js="answer"
+          />
+          <p class="left">
+            <span data-js="answer-characters">50</span> characters left
           </p>
           <label for="tags">Tags (one or more tags separated by a comma)</label>
           <input required id="tags" type="text" name="tags" />

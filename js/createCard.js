@@ -67,31 +67,51 @@ export default function createCard(card, cardsList) {
   cardAnswerVariant3.textContent = card.answers[3];
 
   cardAnswerVariant0.addEventListener("click", () => {
-    cardAnswerVariant0.classList.toggle("clicked");
+    //cardAnswerVariant0.classList.toggle("chosen");
+    cardAnswerVariant0.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
+    if (card.rightAnswer === 0) card.answeredRight = true;
+    if (card.id === cardsList.length) {
+      alert(`You answered all ${cardsList.length} questions!`);
+    }
   });
 
   cardAnswerVariant1.addEventListener("click", () => {
-    cardAnswerVariant1.classList.toggle("clicked");
+    //cardAnswerVariant1.classList.toggle("chosen");
+    cardAnswerVariant1.classList.add("chosen");
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
+    if (card.rightAnswer === 1) card.answeredRight = true;
+    if (card.id === cardsList.length) {
+      alert(`You answered all ${cardsList.length} questions!`);
+    }
   });
 
   cardAnswerVariant2.addEventListener("click", () => {
-    cardAnswerVariant2.classList.toggle("clicked");
+    //cardAnswerVariant2.classList.toggle("chosen");
+    cardAnswerVariant2.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
+    if (card.rightAnswer === 2) card.answeredRight = true;
+    if (card.id === cardsList.length) {
+      alert(`You answered all ${cardsList.length} questions!`);
+    }
   });
 
   cardAnswerVariant3.addEventListener("click", () => {
-    cardAnswerVariant3.classList.toggle("clicked");
+    //cardAnswerVariant3.classList.toggle("chosen");
+    cardAnswerVariant3.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
+    if (card.rightAnswer === 3) card.answeredRight = true;
+    if (card.id === cardsList.length) {
+      alert(`You answered all ${cardsList.length} questions!`);
+    }
   });
 
   cardAnswersList.append(
