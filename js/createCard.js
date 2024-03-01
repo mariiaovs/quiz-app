@@ -73,8 +73,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
     if (card.rightAnswer === 0) card.answeredRight = true;
+    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
     if (card.id === cardsList.length) {
-      alert(`You answered all ${cardsList.length} questions!`);
+      alert(
+        `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
+      );
     }
   });
 
@@ -85,8 +88,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
     if (card.rightAnswer === 1) card.answeredRight = true;
+    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
     if (card.id === cardsList.length) {
-      alert(`You answered all ${cardsList.length} questions!`);
+      alert(
+        `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
+      );
     }
   });
 
@@ -97,8 +103,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
     if (card.rightAnswer === 2) card.answeredRight = true;
+    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
     if (card.id === cardsList.length) {
-      alert(`You answered all ${cardsList.length} questions!`);
+      alert(
+        `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
+      );
     }
   });
 
@@ -109,8 +118,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
     if (card.rightAnswer === 3) card.answeredRight = true;
+    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
     if (card.id === cardsList.length) {
-      alert(`You answered all ${cardsList.length} questions!`);
+      alert(
+        `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
+      );
     }
   });
 
