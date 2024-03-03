@@ -16,8 +16,20 @@ if (cardsList === "undefined") {
   cardsList = JSON.parse(cardsList);
 } */
 
+console.log(localStorage.getItem("cards"));
+
+/* let cardsList;
+
+if (
+  localStorage.getItem("cards") === "undefined" ||
+  !localStorage.getItem("cards")
+)
+  cardsList = cards;
+else cardsList = JSON.parse(localStorage.getItem("cards")); */
+
 let cardsList =
-  localStorage.getItem("cards") === "undefined"
+  localStorage.getItem("cards") === "undefined" ||
+  !localStorage.getItem("cards")
     ? cards
     : JSON.parse(localStorage.getItem("cards"));
 

@@ -72,9 +72,12 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
-    if (card.rightAnswer === 0) card.answeredRight = true;
+    cardsList.isAnswered = !cardsList.isAnswered;
+    if (card.rightAnswer === 0) card.answeredRight = card.answeredRight;
+    localStorage.setItem("cards", JSON.stringify(cardsList));
+    const answeredCards = cardsList.filter((card) => card.isAnswered);
     const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
-    if (card.id === cardsList.length) {
+    if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
@@ -87,9 +90,12 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
+    cardsList.isAnswered = !cardsList.isAnswered;
     if (card.rightAnswer === 1) card.answeredRight = true;
+    localStorage.setItem("cards", JSON.stringify(cardsList));
+    const answeredCards = cardsList.filter((card) => card.isAnswered);
     const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
-    if (card.id === cardsList.length) {
+    if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
@@ -102,9 +108,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
+    cardsList.isAnswered = !cardsList.isAnswered;
+    localStorage.setItem("cards", JSON.stringify(cardsList));
     if (card.rightAnswer === 2) card.answeredRight = true;
     const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
-    if (card.id === cardsList.length) {
+    if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
@@ -117,9 +125,11 @@ export default function createCard(card, cardsList) {
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
+    cardsList.isAnswered = !cardsList.isAnswered;
+    localStorage.setItem("cards", JSON.stringify(cardsList));
     if (card.rightAnswer === 3) card.answeredRight = true;
     const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
-    if (card.id === cardsList.length) {
+    if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );

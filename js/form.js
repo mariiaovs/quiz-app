@@ -48,6 +48,7 @@ form.addEventListener("submit", (event) => {
     rightAnswer: Number(data.answer),
     tags,
     isBookmarked: false,
+    isAnswered: false,
     answeredRight: false,
   };
 

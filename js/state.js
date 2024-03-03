@@ -6,6 +6,7 @@ export const cards = [
     rightAnswer: 0,
     tags: ["teesorten", "china"],
     isBookmarked: false,
+    isAnswered: false,
     answeredRight: false,
   },
 
@@ -16,6 +17,7 @@ export const cards = [
     rightAnswer: 2,
     tags: ["teesorten", "wasser"],
     isBookmarked: false,
+    isAnswered: false,
     answeredRight: false,
   },
 
@@ -27,6 +29,7 @@ export const cards = [
     tags: ["region", "teesorten"],
     rightAnswer: 1,
     isBookmarked: false,
+    isAnswered: false,
     answeredRight: false,
   },
 
@@ -38,6 +41,7 @@ export const cards = [
     rightAnswer: 0,
     tags: ["schwarztee", "teesorten"],
     isBookmarked: false,
+    isAnswered: false,
     answeredRight: false,
   },
 ];
