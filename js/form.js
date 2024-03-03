@@ -14,20 +14,15 @@ const main = document.querySelector('[data-js="main"]');
 const leftCharactersQuestion = document.querySelector(
   '[data-js="question-characters"]'
 );
-const leftCharactersAnswer = document.querySelector(
-  '[data-js="answer-characters"]'
-);
 
 const leftCharactersAnswers = document.querySelector(
   '[data-js="answers-characters"]'
 );
 
 const textareaQuestion = document.querySelector('[data-js="question"]');
-const textareaAnswer = document.querySelector('[data-js="answer"]');
 const textareaAnswers = document.querySelector('[data-js="answers"]');
 
 showLeftCharacters(textareaQuestion, leftCharactersQuestion, 50);
-showLeftCharacters(textareaAnswer, leftCharactersAnswer, 50);
 showLeftCharacters(textareaAnswers, leftCharactersAnswers, 150);
 
 function showLeftCharacters(textarea, leftCharacters, length) {
