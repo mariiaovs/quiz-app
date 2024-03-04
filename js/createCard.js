@@ -67,16 +67,19 @@ export default function createCard(card, cardsList) {
   cardAnswerVariant3.textContent = card.answers[3];
 
   cardAnswerVariant0.addEventListener("click", () => {
-    //cardAnswerVariant0.classList.toggle("chosen");
-    cardAnswerVariant0.classList.add("chosen");
+    cardAnswerVariant0.classList.toggle("chosen");
+    //cardAnswerVariant0.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
-    cardsList.isAnswered = !cardsList.isAnswered;
-    if (card.rightAnswer === 0) card.answeredRight = card.answeredRight;
+    card.isAnswered = !card.isAnswered;
+    if (card.rightAnswer === 0) card.answeredRight = !card.answeredRight;
     localStorage.setItem("cards", JSON.stringify(cardsList));
-    const answeredCards = cardsList.filter((card) => card.isAnswered);
-    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
+    const answeredCards = cardsList.filter((cardEl) => cardEl.isAnswered);
+    const rightAnsweredCards = cardsList.filter(
+      (cardEl) => cardEl.answeredRight
+    );
+    console.log(cardsList.isAnswered);
     if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
@@ -85,16 +88,18 @@ export default function createCard(card, cardsList) {
   });
 
   cardAnswerVariant1.addEventListener("click", () => {
-    //cardAnswerVariant1.classList.toggle("chosen");
-    cardAnswerVariant1.classList.add("chosen");
+    cardAnswerVariant1.classList.toggle("chosen");
+    //cardAnswerVariant1.classList.add("chosen");
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
-    cardsList.isAnswered = !cardsList.isAnswered;
-    if (card.rightAnswer === 1) card.answeredRight = true;
+    card.isAnswered = !card.isAnswered;
+    if (card.rightAnswer === 1) card.answeredRight = !card.answeredRight;
     localStorage.setItem("cards", JSON.stringify(cardsList));
-    const answeredCards = cardsList.filter((card) => card.isAnswered);
-    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
+    const answeredCards = cardsList.filter((cardEl) => cardEl.isAnswered);
+    const rightAnsweredCards = cardsList.filter(
+      (cardEl) => cardEl.answeredRight
+    );
     if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
@@ -103,15 +108,18 @@ export default function createCard(card, cardsList) {
   });
 
   cardAnswerVariant2.addEventListener("click", () => {
-    //cardAnswerVariant2.classList.toggle("chosen");
-    cardAnswerVariant2.classList.add("chosen");
+    cardAnswerVariant2.classList.toggle("chosen");
+    //cardAnswerVariant2.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
     cardAnswerVariant3.toggleAttribute("disabled");
-    cardsList.isAnswered = !cardsList.isAnswered;
+    card.isAnswered = !card.isAnswered;
+    if (card.rightAnswer === 2) card.answeredRight = !card.answeredRight;
     localStorage.setItem("cards", JSON.stringify(cardsList));
-    if (card.rightAnswer === 2) card.answeredRight = true;
-    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
+    const answeredCards = cardsList.filter((cardEl) => cardEl.isAnswered);
+    const rightAnsweredCards = cardsList.filter(
+      (cardEl) => cardEl.answeredRight
+    );
     if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
@@ -120,15 +128,19 @@ export default function createCard(card, cardsList) {
   });
 
   cardAnswerVariant3.addEventListener("click", () => {
-    //cardAnswerVariant3.classList.toggle("chosen");
-    cardAnswerVariant3.classList.add("chosen");
+    cardAnswerVariant3.classList.toggle("chosen");
+    //cardAnswerVariant3.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
     cardAnswerVariant2.toggleAttribute("disabled");
     cardAnswerVariant0.toggleAttribute("disabled");
-    cardsList.isAnswered = !cardsList.isAnswered;
+    card.isAnswered = !card.isAnswered;
+    if (card.rightAnswer === 3) card.answeredRight = !card.answeredRight;
     localStorage.setItem("cards", JSON.stringify(cardsList));
-    if (card.rightAnswer === 3) card.answeredRight = true;
-    const rightAnsweredCards = cardsList.filter((card) => card.answeredRight);
+    const answeredCards = cardsList.filter((cardEl) => cardEl.isAnswered);
+    const rightAnsweredCards = cardsList.filter(
+      (cardEl) => cardEl.answeredRight
+    );
+    console.log(cardsList);
     if (cardsList.length === answeredCards.length) {
       alert(
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
