@@ -66,7 +66,65 @@ export default function createCard(card, cardsList) {
   cardAnswerVariant3.className = "card_answer button";
   cardAnswerVariant3.textContent = card.answers[3];
 
-  cardAnswerVariant0.addEventListener("click", () => {
+  // create a function for 4 answer-buttons
+  function handleClickAnswer(answer0, answer1, answer2, answer3) {
+    answer0.addEventListener("click", () => {
+      answer0.classList.toggle("chosen");
+      //cardAnswerVariant0.classList.add("chosen");
+      answer1.toggleAttribute("disabled");
+      answer2.toggleAttribute("disabled");
+      answer3.toggleAttribute("disabled");
+      card.isAnswered = !card.isAnswered;
+      if (card.rightAnswer === 0) card.answeredRight = !card.answeredRight;
+      localStorage.setItem("cards", JSON.stringify(cardsList));
+      const answeredCards = cardsList.filter((cardEl) => cardEl.isAnswered);
+      const rightAnsweredCards = cardsList.filter(
+        (cardEl) => cardEl.answeredRight
+      );
+      console.log(cardsList.isAnswered);
+      if (cardsList.length === answeredCards.length) {
+        //console.log(cardsList)
+        alert(
+          `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
+        );
+      }
+      console.log(cardsList);
+    });
+  }
+
+  //end - create a function for 4 answer-buttons
+
+  // cal the function for 4 answers
+  handleClickAnswer(
+    cardAnswerVariant0,
+    cardAnswerVariant1,
+    cardAnswerVariant2,
+    cardAnswerVariant3
+  );
+
+  handleClickAnswer(
+    cardAnswerVariant1,
+    cardAnswerVariant0,
+    cardAnswerVariant2,
+    cardAnswerVariant3
+  );
+
+  handleClickAnswer(
+    cardAnswerVariant2,
+    cardAnswerVariant1,
+    cardAnswerVariant0,
+    cardAnswerVariant3
+  );
+
+  handleClickAnswer(
+    cardAnswerVariant3,
+    cardAnswerVariant1,
+    cardAnswerVariant2,
+    cardAnswerVariant0
+  );
+  //end - call
+
+  /* cardAnswerVariant0.addEventListener("click", () => {
     cardAnswerVariant0.classList.toggle("chosen");
     //cardAnswerVariant0.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
@@ -86,8 +144,8 @@ export default function createCard(card, cardsList) {
       );
     }
   });
-
-  cardAnswerVariant1.addEventListener("click", () => {
+ */
+  /* cardAnswerVariant1.addEventListener("click", () => {
     cardAnswerVariant1.classList.toggle("chosen");
     //cardAnswerVariant1.classList.add("chosen");
     cardAnswerVariant0.toggleAttribute("disabled");
@@ -105,9 +163,9 @@ export default function createCard(card, cardsList) {
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
     }
-  });
+  }); */
 
-  cardAnswerVariant2.addEventListener("click", () => {
+  /* cardAnswerVariant2.addEventListener("click", () => {
     cardAnswerVariant2.classList.toggle("chosen");
     //cardAnswerVariant2.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
@@ -125,9 +183,9 @@ export default function createCard(card, cardsList) {
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
     }
-  });
+  }); */
 
-  cardAnswerVariant3.addEventListener("click", () => {
+  /* cardAnswerVariant3.addEventListener("click", () => {
     cardAnswerVariant3.classList.toggle("chosen");
     //cardAnswerVariant3.classList.add("chosen");
     cardAnswerVariant1.toggleAttribute("disabled");
@@ -146,7 +204,7 @@ export default function createCard(card, cardsList) {
         `You answered right ${rightAnsweredCards.length} of ${cardsList.length} questions!`
       );
     }
-  });
+  }); */
 
   cardAnswersList.append(
     cardAnswerVariant0,

@@ -40,6 +40,10 @@ let cardsList =
 //console.log(localStorage.getItem("cards"));
 //console.log(cardsList);
 
+cardsList.map((card) => ({ ...card, isAnswered: false, answeredRight: false }));
+
+localStorage.setItem("cards", JSON.stringify(cardsList));
+
 cardsList.forEach((card) => {
   main.append(createCard(card, cardsList));
 });
